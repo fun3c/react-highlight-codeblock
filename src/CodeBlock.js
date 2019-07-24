@@ -11,11 +11,10 @@ class CodeBlock extends React.Component {
     };
   }
   componentWillReceiveProps(nextProps) {
-    // const { code } = this.props;
-    // this.setState({
-    //     ...this.state.codeStr,
-    //     codeStr: nextProps.code
-    //   });
+    const { code } = this.props;
+    if (code !== nextProps.code) {
+      this.setState({ code: nextProps.code });
+    }
   }
   componentDidMount() {
     const { code } = this.props;
