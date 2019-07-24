@@ -16,13 +16,6 @@ class CodeBlock extends React.Component {
       this.setState({ code: nextProps.code });
     }
   }
-  componentDidMount() {
-    const { code } = this.props;
-    this.setState({
-      ...this.state.codeStr,
-      codeStr: code
-    });
-  }
   onChange = (e) => {
     const { callback } = this.props;
     this.setState({
@@ -32,28 +25,35 @@ class CodeBlock extends React.Component {
 
   render() {
     const { codeStr } = this.state;
-    const { className, editer, language='jsx', style='', showLineNumbers=false } = this.props;
+    const { code, className, editer, language='jsx', style='', showLineNumbers=false } = this.props;
     const cls = classnames('precodebox', className);
-    const preStyle = styles[style] || '';
+    const codeStyle = styles[style] || styles.defaultStyle; // ['agate', 'ascetic', 'brownPaper']
     const lineNumberStyle = showLineNumbers ? { paddingLeft: 37 } : {};
-    const enterStyle = Object.assign({}, preStyle.hljs, lineNumberStyle)
-    
+    const textareaStyle = Object.assign({}, codeStyle.hljs, lineNumberStyle)
+    const value = codeStr || code;
+    for (let key in codeStyle) {
+      const obj = codeStyle[key];
+      if (obj.fontWeight === 'bold') {
+        obj.fontWeight = 400;
+      }
+    }
     return (
       <div className={cls}>
         {
           editer && <textarea
-            value={codeStr}
+            value={value}
             className="invisible"
-            style={enterStyle}
+            style={textareaStyle}
             onChange={e => this.onChange(e)}
           />
         }
         <SyntaxHighlighter
           language={language}
-          style={preStyle}
+          style={codeStyle}
+          customStyle={{fontWight: 'normal'}}
           showLineNumbers={showLineNumbers}
         >
-          {codeStr}
+          {value}
         </SyntaxHighlighter>
       </div>
     );

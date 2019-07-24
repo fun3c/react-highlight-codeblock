@@ -1,4 +1,4 @@
-.codeBase () {
+.codeBase() {
   margin: 0;
   border: 0;
   background: none;
@@ -20,11 +20,6 @@
   overflow-wrap: break-word;
   
 }
-.code-font() {
-  line-height: 1.25em !important;
-  font-size: 1em !important;
-  font-family: 'Lucida Console',Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace !important;
-}
 .code-rect() {
   width: 100%;
   height: 100%;
@@ -32,8 +27,6 @@
   margin: 0.5em 0px;
 }
 .precodebox {
-  width: 100%;
-  height: 100%;
   position: relative;
   text-align: left;
   box-sizing: border-box;
@@ -41,28 +34,27 @@
   overflow: hidden;
   white-space: pre;
   opacity: 0.95;
+  .codeBase();
   .invisible {
     .codeBase();
     .code-rect();
-    .code-font();
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+    outline: 0;
+    overflow-y: hidden;
+    background: none !important;
     -webkit-font-smoothing: antialiased;
     -webkit-text-fill-color: transparent;
-    outline: 0;
-    background: none !important;
-    overflow-y: hidden;
   }
   pre {
     width: 100%;
     height: 100%;
     .codeBase();
     .code-rect();
-    .code-font();
     code {
-      .code-font();
+      .codeBase();
     }
   }
 }

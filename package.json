@@ -1,6 +1,6 @@
 {
   "name": "react-highlight-codeblock",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "syntax highlighting component for react-syntax-highlighter with highlightjs ast using inline styles",
   "keywords": [
     "react",
