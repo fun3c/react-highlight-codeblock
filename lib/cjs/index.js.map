@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/index.js"],"names":["CodeBlock"],"mappings":";;;;;;;;;AAAA;;eAEeA,qB","sourcesContent":["import CodeBlock from './CodeBlock';\r\n\r\nexport default CodeBlock;"],"file":"index.js"}

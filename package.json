@@ -1,0 +1,51 @@
+{
+  "name": "react-highlight-codeblock",
+  "version": "1.0.4",
+  "description": "syntax highlighting component for react-syntax-highlighter with highlightjs ast using inline styles",
+  "keywords": [
+    "react",
+    "syntax",
+    "code",
+    "pre",
+    "highlighting"
+  ],
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "scripts": {
+    "build:cjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib/cjs --source-maps true --delete-dir-on-start --verbose",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --out-dir lib/esm --source-maps true --delete-dir-on-start --verbose",
+    "build:css": "compile-less -d src -o lib/esm",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fun3c",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-syntax-highlighter": "^11.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
+    "babel-plugin-transform-remove-imports": "^1.0.8",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "compile-less-cli": "^1.1.5",
+    "cross-env": "^5.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "classnames": "^2.2.6"
+  }
+}
