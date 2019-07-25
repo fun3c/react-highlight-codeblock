@@ -1,6 +1,13 @@
 # React Highlight CodeBlock
 
-[![NPM version](https://img.shields.io/npm/v/brick.js.svg?style=flat)](https://www.npmjs.org/package/brick.js) [![Build Status](https://travis-ci.org/brick-js/brick.js.svg?branch=master)](https://travis-ci.org/brick-js/brick.js)
+[![](https://travis-ci.org/fun3c/react-highlight-codeblock.svg?branch=master)](https://travis-ci.org/fun3c/react-highlight-codeblock)
+[![](https://img.shields.io/npm/dt/react-highlight-codeblock.svg)](https://travis-ci.org/fun3c/react-highlight-codeblock)
+[![](https://img.shields.io/npm/l/react-highlight-codeblock.svg)](https://travis-ci.org/fun3c/react-highlight-codeblock)
+[![](https://img.shields.io/github/followers/fun3c.svg)](https://travis-ci.org/fun3c/react-highlight-codeblock)
+[![](https://img.shields.io/github/forks/fun3c/react-highlight-codeblock.svg)](https://travis-ci.org/fun3c/react-highlight-codeblock)
+
+
+
 
 Syntax highlighting component based on `react-syntax-highlighter` development.
 

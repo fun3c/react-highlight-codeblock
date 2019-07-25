@@ -1,6 +1,6 @@
 {
   "name": "react-highlight-codeblock",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "syntax highlighting component for react-syntax-highlighter with highlightjs ast using inline styles",
   "keywords": [
     "react",
@@ -20,6 +20,10 @@
   },
   "author": "fun3c",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fun3c/react-highlight-codeblock.git"
+  },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
